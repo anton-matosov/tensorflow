@@ -144,6 +144,8 @@ fi
 
 if [[ ${TF_DOCKER_BUILD_TYPE} == "cpu" ]]; then
   DOCKER_BINARY="docker"
+  ORIG_DOCKERFILE="${ORIG_DOCKERFILE}-cpu-mkl"
+  FINAL_TAG="${FINAL_TAG}-cpu-mkl"
 elif   [[ ${TF_DOCKER_BUILD_TYPE} == "gpu" ]]; then
   DOCKER_BINARY="nvidia-docker"
 

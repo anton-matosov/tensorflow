@@ -1,4 +1,4 @@
-FROM tensorflow/tensorflow:latest-devel
+FROM tensorflow/tensorflow:latest-devel-py3
 
 LABEL maintainer="Clayne Robison<clayne.b.robison@intel.com>"
 
@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     rm -rf /var/lib/apt/lists/*
 
 RUN pip --no-cache-dir install --upgrade \
-        pip setuptools
+        setuptools
 
 RUN pip --no-cache-dir install wheel 
 
